@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Interactive App</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="container-fluid">
+
+    <h1>Web Apps and Services App Challenge</h1>
+    <h3>Right-click / Inspect, then select console</h3>
+
+    <p>Enter your name:
+      <input id="guest" type="string" value="Eden">
+    </p>
+
+    <p>Enter first string:
+      <input id="str1" type="string" value="Hello">
+    </p>
+
+    <p>Enter second string:
+      <input id="str2" type="string" value="Hello World">
+    </p>
+
+    <button id="clicker" class="btn btn-primary">Click me!</button>
+
+    <p id="result"></p>
+
+  </main>
+
+  <script>
+    console.log("SCRIPT START")
+
+    console.log("Declare functions..............................")
+
+    function min(str1, str2) {
+      if(str1.length<str2.length){
+          return "'" + str1 + "'" + " is the shortest string and it is " + Math.min(str1.length, str2.length) + " characters long."
+      }
+      else{
+        return "'" + str2 + "'" + " is the shortest string and it is " + Math.min(str1.length, str2.length) + " characters long."
+
+      }
+    }
+    console.log("min=" + min)
+
+    console.log("Declare event listeners .......................")
+
+    document.addEventListener("dblclick", function () {
+      console.log("add(a,b)=" + add(a, b))
+    })
+
+    document.getElementById("clicker").addEventListener("click", function () {
+      const guest = document.getElementById("guest").value
+      const str1 = (document.getElementById("str1").value)
+      const str2 = (document.getElementById("str2").value)
+      const ans = guest + " " + min(str1, str2)
+      document.getElementById("result").innerHTML = ans
+    })
+
+    console.log("SCRIPT END")
+  </script>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
+</body>
+
+</html>
