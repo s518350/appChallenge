@@ -45,11 +45,11 @@
       if(str1.length<str2.length){
           return "'" + str1 + "'" + " is the shortest string and it is " + Math.min(str1.length, str2.length) + " characters long."
       }
-      else if(str2.length<str1.length){
-        return "'" + str2 + "'" + " is the shortest string and it is " + Math.min(str1.length, str2.length) + " characters long."
+      else if(str2.length == str1.length){
+        return "These strings are the same length and they are " + Math.min(str1.length, str2.length) + " characters long."
       }
       else{
-        return "These strings are the same length and they are " + Math.min(str1.length, str2.length) + " characters long."
+        return "'" + str2 + "'" + " is the shortest string and it is " + Math.min(str1.length, str2.length) + " characters long."
       }
     }
     console.log("min=" + min)
